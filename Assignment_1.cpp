@@ -4,21 +4,19 @@
 #include <vector>
 using namespace std;
 
-
-
-
+//Struct
 struct  PERSON {
     char  Name[20];
     float Balance;
   };
 
+//Function Protypes
 void Display(PERSON arr[], int count);
 void FindtheRiches(PERSON arr[], int count);
 void Deposit(string name, PERSON arr[], int count);
 
-
+//Main
 int main() {
-
     fstream filein;
     ofstream fileout;
     filein.open("data.txt");
@@ -37,7 +35,6 @@ int main() {
 PERSON people[count];
 
 filein.close();
-
 
 filein.open("data.txt");
     for (int i = 0; i < count; i++)
@@ -58,19 +55,12 @@ filein.open("data.txt");
 
   cout << "Please insert name:  ";
   getline(cin, user);
-
   Deposit(user, people, count);
-
-
-
-
-
-
-
     filein.close();
     return 0;
 }
 
+//Display the Array
 void Display(PERSON arr[], int count)
 {
   cout << "Name       Balance" << endl << "--------------"<< endl;
@@ -82,6 +72,7 @@ void Display(PERSON arr[], int count)
 
 };
 
+//Find the Richest
 void FindtheRiches(PERSON arr[], int count)
 {
 float richest = 0;
@@ -95,7 +86,7 @@ string richperson;
 cout << "The richest person is " << richperson << endl << endl;
 };
 
-
+//Deposit Function
 void Deposit(string name, PERSON arr[], int count)
 {
   float bal = 0.0;
@@ -105,7 +96,7 @@ void Deposit(string name, PERSON arr[], int count)
   {
     strcmp(name.c_str(), arr[i].Name);
     if (name == arr[i].Name){num = i;};
-}
+  };
 
     if(name == arr[num].Name)
     {
@@ -113,7 +104,6 @@ void Deposit(string name, PERSON arr[], int count)
       cin >> bal;
       arr[num].Balance += bal;
       cout << arr[num].Name << " your new balance is " << arr[num].Balance << endl;
-
     }
 
 };
