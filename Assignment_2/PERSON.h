@@ -1,3 +1,5 @@
+//Wesley Friday
+//CPSC301 - 3
 //begin person.h
 #ifndef PERSON_h
 #define PERSON_h
