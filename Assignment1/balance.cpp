@@ -25,16 +25,16 @@ int main() {
 
     fstream filein;
     filein.open("data.txt");
-    int count = 6;
+    int count = 0;
     string user;
 
 //Getting the Count
-    // while(!filein.eof() )
-    // {
-    //   string u;
-    //   getline(filein, u);
-    //   count++;
-    // };
+    while(!filein.eof() )
+    {
+      string u;
+      getline(filein, u);
+      count++;
+    };
 filein.close();
 
 
