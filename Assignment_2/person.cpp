@@ -1,3 +1,5 @@
+//Wesley Friday
+//CPSC301 - 3
 #include <iostream>
 #include <string>
 #include "PERSON.h"
